@@ -69,14 +69,6 @@
         flavor = "balanced";
     };
 
-    tdthl: td {
-        compatible = "zmk,behavior-tap-dance";
-        label = "Tap Dance and thl";
-        #binding-cells = <0>;
-        tapping-term-ms = <250>;
-        bindings = <&thl3 5 5>, <&sl 0>;
-    };
-
     thl3: thl3 {
         compatible = "zmk,behavior-hold-tap";
         label = "tap hold 2 layer";
@@ -84,6 +76,14 @@
 
         #binding-cells = <2>;
         tapping-term-ms = <180>;
+    };
+
+    tdthl: tdthl {
+        compatible = "zmk,behavior-tap-dance";
+        label = "Tap Dance and thl";
+        #binding-cells = <0>;
+        tapping-term-ms = <250>;
+        bindings = <&thl3 5 5>, <&sl 0>;
     };
 
     behaviors {
@@ -186,11 +186,11 @@
         numpad {
             display-name = "layer4";
             bindings = <
-&trans  &none   &none   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&trans  &none   &none   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&trans  &none   &none   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&trans  &trans  &none   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&none   &trans  &trans  &trans  &trans  &trans    &none  &trans  &trans  &trans  &trans  &trans
+&trans  &none   &none   &none   &none   &none     &none  &kp N7  &kp N8     &kp N9   &kp PLUS   &kp ASTRK     &kp TAB
+&trans  &none   &none   &none   &none   &none     &none  &kp N4  &kp N5     &kp N6   &kp MINUS  &kp SLASH     &none
+&trans  &none   &none   &none   &none   &none     &none  &kp N1  &kp N2     &kp N3   &kp EQUAL  &kp UP_ARROW  &none
+&trans  &trans  &none   &none   &none   &none     &none  &kp N0  &kp COMMA  &kp DOT  &kp LEFT   &kp DOWN      &kp RIGHT
+&none   &trans  &trans  &trans  &trans  &trans    &none  &trans  &trans     &trans   &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
