@@ -78,12 +78,21 @@
         tapping-term-ms = <180>;
     };
 
-    tdthl: tdthl {
+    tdthl1: tdthl1 {
         compatible = "zmk,behavior-tap-dance";
         label = "Tap Dance and thl";
         #binding-cells = <0>;
         tapping-term-ms = <250>;
         bindings = <&thl3 5 5>, <&to 0>;
+    };
+
+    tdthl2: tdthl2 {
+        compatible = "zmk,behavior-tap-dance";
+        label = "tap dance and thl";
+        #binding-cells = <0>;
+        bindings = <&thl3 6 6>, <&to 0>;
+
+        tapping-term-ms = <250>;
     };
 
     behaviors {
@@ -124,7 +133,7 @@
 &kp TAB         &kp Q         &kp W   &kp E   &kp R        &kp T        &kp DOWN_ARROW   &kp Y          &kp U          &kp I           &kp O            &kp P              &kp BSLH
 &kp LEFT_SHIFT  &kp A         &kp S   &kp D   &kp F        &kp G        &kp LEFT_ARROW   &kp H          &kp J          &kp K           &kp L            &thc SEMICOLON UP  &th COLON MINUS
 &kp LCTRL       &kp LEFT_WIN  &kp Z   &kp X   &kp C        &kp V        &kp RIGHT_ARROW  &kp B          &kp N          &kp M           &thc COMMA LEFT  &thc PERIOD DOWN   &thc SLASH RIGHT
-&kp C_MUTE      &kp LCTRL     &mo 2   &none   &thl2 3 ESC  &kp SPACE    &kp ENTER        &thl2 1 ENTER  &kp BACKSPACE  &kp LEFT_SHIFT  &tdthl           &kp DELETE
+&kp C_MUTE      &kp LCTRL     &mo 2   &none   &thl2 3 ESC  &kp SPACE    &kp ENTER        &thl2 1 ENTER  &kp BACKSPACE  &kp LEFT_SHIFT  &tdthl1          &kp DELETE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
