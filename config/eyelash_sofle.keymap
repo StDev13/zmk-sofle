@@ -72,7 +72,7 @@
     thl3: thl3 {
         compatible = "zmk,behavior-hold-tap";
         label = "tap hold 2 layer";
-        bindings = <&mo>, <&sl>;
+        bindings = <&mo>, <&to>;
 
         #binding-cells = <2>;
         tapping-term-ms = <180>;
@@ -83,7 +83,7 @@
         label = "Tap Dance and thl";
         #binding-cells = <0>;
         tapping-term-ms = <250>;
-        bindings = <&thl3 5 5>, <&sl 0>;
+        bindings = <&thl3 5 5>, <&to 0>;
     };
 
     behaviors {
