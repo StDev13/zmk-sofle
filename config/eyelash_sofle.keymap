@@ -164,7 +164,7 @@
 
         BT {
             bindings = <
-&trans          &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &mmv MOVE_UP     &none   &none   &none   &none   &none   &trans
+&soft_off       &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4     &mmv MOVE_UP     &none   &none   &none   &none   &none   &trans
 &trans          &bt BT_DISC 0  &bt BT_DISC 1  &bt BT_DISC 2  &bt BT_DISC 3  &bt BT_DISC 4    &mmv MOVE_DOWN   &none   &none   &none   &none   &none   &none
 &trans          &none          &none          &none          &none          &none            &mmv MOVE_LEFT   &none   &none   &none   &none   &none   &none
 &bt BT_CLR_ALL  &trans         &none          &bootloader    &none          &out OUT_TOG     &mmv MOVE_RIGHT  &none   &none   &none   &none   &none   &none
