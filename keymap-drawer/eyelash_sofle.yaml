@@ -62,9 +62,9 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - {t: '$$mdi:keyboard-return$$', h: layer1}
   - {t: '$$mdi:backspace$$', h: layer4}
-  - $$mdi:apple-keyboard-shift$$
   - '&tdthl1'
   - '&tdthl2'
+  - $$mdi:apple-keyboard-shift$$
   layer1:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:minus-circle-outline$$', type: none}
