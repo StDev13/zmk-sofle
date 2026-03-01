@@ -83,14 +83,14 @@
         label = "Tap Dance and thl";
         #binding-cells = <0>;
         tapping-term-ms = <250>;
-        bindings = <&thl3 5 0>, <&tgon 5>;
+        bindings = <&thl3 4 0>, <&tgon 4>;
     };
 
     tdthl2: tdthl2 {
         compatible = "zmk,behavior-tap-dance";
         label = "tap dance and thl";
         #binding-cells = <0>;
-        bindings = <&thl3 6 0>, <&tgon 6>;
+        bindings = <&thl3 5 0>, <&tgon 5>;
 
         tapping-term-ms = <250>;
     };
@@ -99,7 +99,7 @@
         compatible = "zmk,behavior-tap-dance";
         label = "TDTHL3";
         #binding-cells = <0>;
-        bindings = <&thl3 7 0>, <&tgon 7>;
+        bindings = <&thl3 7 0>, <&tgon 8>;
 
         tapping-term-ms = <250>;
     };
@@ -155,24 +155,11 @@
 &kp TAB         &kp Q         &kp W   &kp E    &kp R        &kp T        &kp DOWN_ARROW   &kp Y          &kp U              &kp I    &kp O            &kp P              &th ASTRK PLUS
 &kp LEFT_SHIFT  &kp A         &kp S   &kp D    &kp F        &kp G        &kp LEFT_ARROW   &kp H          &kp J              &kp K    &kp L            &thc SEMICOLON UP  &th COLON MINUS
 &kp LCTRL       &kp LEFT_WIN  &kp Z   &kp X    &kp C        &kp V        &kp RIGHT_ARROW  &kp B          &kp N              &kp M    &thc COMMA LEFT  &thc PERIOD DOWN   &thc SLASH RIGHT
-&kp C_MUTE      &kp LEFT_ALT  &mo 2   &tdthl3  &thl2 3 ESC  &kp SPACE    &kp ENTER        &thl2 1 ENTER  &thl2 6 BACKSPACE  &tdthl1  &tdthl2          &kp RIGHT_SHIFT
+&kp C_MUTE      &kp LEFT_ALT  &mo 1   &tdthl3  &thl2 2 ESC  &kp SPACE    &kp ENTER        &thl2 6 ENTER  &thl2 5 BACKSPACE  &tdthl1  &tdthl2          &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
             display-name = "LAYER0";
-        };
-
-        mouse {
-            bindings = <
-&trans      &none   &none   &none   &none   &none     &mmv MOVE_UP     &none           &none            &none           &none            &none   &kp C_MUTE
-&trans      &none   &none   &none   &none   &none     &mmv MOVE_DOWN   &msc SCRL_UP    &mkp MB1         &mmv MOVE_UP    &mkp MB2         &none   &kp C_VOLUME_UP
-&trans      &none   &none   &none   &none   &none     &mmv MOVE_LEFT   &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &kp C_VOLUME_DOWN
-&trans      &trans  &none   &none   &none   &none     &mmv MOVE_RIGHT  &kp LC(R)       &kp LC(LS(TAB))  &mkp MB3        &kp LC(TAB)      &none   &kp LC(W)
-&kp C_MUTE  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans          &trans           &trans          &trans           &trans
-            >;
-
-            display-name = "layer1";
-            sensor-bindings = <&scroll_encoder>;
         };
 
         BT {
@@ -217,11 +204,11 @@
         numpad {
             display-name = "layer4";
             bindings = <
-&trans  &none   &none   &none   &none   &none     &none  &kp N7         &kp N8     &kp N9   &kp PLUS   &kp ASTRK     &kp DEL
-&trans  &none   &none   &none   &none   &none     &none  &kp N4         &kp N5     &kp N6   &kp MINUS  &kp SLASH     &kp LS(LC(SPACE))
-&trans  &none   &none   &none   &none   &none     &none  &kp N1         &kp N2     &kp N3   &kp EQUAL  &kp UP_ARROW  &kp TAB
-&trans  &trans  &none   &none   &none   &none     &none  &kp N0         &kp COMMA  &kp DOT  &kp LEFT   &kp DOWN      &kp RIGHT
-&none   &trans  &trans  &trans  &trans  &trans    &none  &thl2 1 ENTER  &trans     &trans   &trans     &trans
+&trans  &none   &none   &none   &none   &none     &none  &kp N7  &kp N8     &kp N9   &kp PLUS   &kp ASTRK     &kp DEL
+&trans  &none   &none   &none   &none   &none     &none  &kp N4  &kp N5     &kp N6   &kp MINUS  &kp SLASH     &kp LS(LC(SPACE))
+&trans  &none   &none   &none   &none   &none     &none  &kp N1  &kp N2     &kp N3   &kp EQUAL  &kp UP_ARROW  &kp TAB
+&trans  &trans  &none   &none   &none   &none     &none  &kp N0  &kp COMMA  &kp DOT  &kp LEFT   &kp DOWN      &kp RIGHT
+&none   &trans  &trans  &trans  &trans  &trans    &none  &trans  &trans     &trans   &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
@@ -237,6 +224,19 @@
 &none   &trans  &trans  &trans  &trans  &trans    &none  &trans         &trans             &trans      &trans          &trans
             >;
 
+            sensor-bindings = <&scroll_encoder>;
+        };
+
+        mouse {
+            bindings = <
+&trans      &none   &none   &none   &none   &none     &mmv MOVE_UP     &none           &none            &none           &none            &none   &kp C_MUTE
+&trans      &none   &none   &none   &none   &none     &mmv MOVE_DOWN   &msc SCRL_UP    &mkp MB1         &mmv MOVE_UP    &mkp MB2         &none   &kp C_VOLUME_UP
+&trans      &none   &none   &none   &none   &none     &mmv MOVE_LEFT   &msc SCRL_DOWN  &mmv MOVE_LEFT   &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none   &kp C_VOLUME_DOWN
+&trans      &trans  &none   &none   &none   &none     &mmv MOVE_RIGHT  &kp LC(R)       &kp LC(LS(TAB))  &mkp MB3        &kp LC(TAB)      &none   &kp LC(W)
+&kp C_MUTE  &trans  &trans  &trans  &trans  &trans    &mkp LCLK        &trans          &trans           &trans          &trans           &trans
+            >;
+
+            display-name = "layer1";
             sensor-bindings = <&scroll_encoder>;
         };
 
