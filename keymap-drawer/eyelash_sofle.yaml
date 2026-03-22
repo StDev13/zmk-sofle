@@ -246,7 +246,7 @@ layers:
   - Ctl+Sft+$$mdi:keyboard-tab$$
   - '&mkp MB3'
   - Ctl+$$mdi:keyboard-tab$$
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
+  - Ctl+Sft+T
   - Ctl+W
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
