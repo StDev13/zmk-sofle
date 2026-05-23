@@ -236,11 +236,11 @@
         game {
             display-name = "layer4";
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp DEL
-&trans  &kp Q         &kp W         &kp E         &kp R         &kp T           &kp  &kp Y         &kp U          &kp I         &kp O         &kp P          &kp ASTERISK
-&trans  &kp A         &kp S         &kp D         &kp F         &kp G           &kp  &kp H         &kp J          &kp K         &kp L         &kp SEMICOLON  &kp COLON
-&trans  &trans        &kp Z         &kp X         &kp C         &kp V           &kp  &kp B         &kp N          &kp M         &kp COMMA     &kp PERIOD     &kp SLASH
-&kp     &trans        &kp           &trans        &kp ESCAPE    &kp SPACE       &kp  &kp ENTER     &kp BACKSPACE  &kp           &kp           &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &none  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp DEL
+&trans  &kp Q         &kp W         &kp E         &kp R         &kp T           &none  &kp Y         &kp U          &kp I         &kp O         &kp P          &kp ASTERISK
+&trans  &kp A         &kp S         &kp D         &kp F         &kp G           &none  &kp H         &kp J          &kp K         &kp L         &kp SEMICOLON  &kp COLON
+&trans  &trans        &kp Z         &kp X         &kp C         &kp V           &none  &kp B         &kp N          &kp M         &kp COMMA     &kp PERIOD     &kp SLASH
+&none   &trans        &none         &trans        &kp ESCAPE    &kp SPACE       &none  &kp ENTER     &kp BACKSPACE  &none         &none         &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
