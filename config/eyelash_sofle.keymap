@@ -78,7 +78,7 @@
         tapping-term-ms = <180>;
     };
 
-    tdthl1: tdthl1 {
+    tdthl4: tdthl4 {
         compatible = "zmk,behavior-tap-dance";
         label = "Tap Dance and thl";
         #binding-cells = <0>;
@@ -86,7 +86,7 @@
         bindings = <&thl3 4 0>, <&tgon 4>;
     };
 
-    tdthl2: tdthl2 {
+    tdthl5: tdthl5 {
         compatible = "zmk,behavior-tap-dance";
         label = "tap dance and thl";
         #binding-cells = <0>;
@@ -95,11 +95,11 @@
         tapping-term-ms = <250>;
     };
 
-    tdthl3: tdthl3 {
+    tdthl7: tdthl7 {
         compatible = "zmk,behavior-tap-dance";
-        label = "TDTHL3";
+        label = "TDTHL7";
         #binding-cells = <0>;
-        bindings = <&thl3 7 0>, <&tgon 8>;
+        bindings = <&thl3 0 0>, <&tgon 7>;
 
         tapping-term-ms = <250>;
     };
@@ -148,7 +148,7 @@
 &kp TAB         &kp Q         &kp W   &kp E    &kp R        &kp T        &kp DOWN_ARROW   &kp Y          &kp U              &kp I    &kp O            &kp P              &th ASTRK PLUS
 &kp LEFT_SHIFT  &kp A         &kp S   &kp D    &kp F        &kp G        &kp LEFT_ARROW   &kp H          &kp J              &kp K    &kp L            &thc SEMICOLON UP  &th COLON MINUS
 &kp LCTRL       &kp LEFT_WIN  &kp Z   &kp X    &kp C        &kp V        &kp RIGHT_ARROW  &kp B          &kp N              &kp M    &thc COMMA LEFT  &thc PERIOD DOWN   &thc SLASH RIGHT
-&none           &kp LEFT_ALT  &mo 1   &tdthl3  &thl2 2 ESC  &kp SPACE    &kp ENTER        &thl2 6 ENTER  &thl2 5 BACKSPACE  &tdthl1  &tdthl2          &kp RIGHT_SHIFT
+&none           &kp LEFT_ALT  &mo 1   &tdthl7  &thl2 2 ESC  &kp SPACE    &kp ENTER        &thl2 6 ENTER  &thl2 5 BACKSPACE  &tdthl4  &tdthl5          &kp RIGHT_SHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -236,11 +236,11 @@
         game {
             display-name = "layer4";
             bindings = <
-&trans  &none   &none   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&trans  &none   &kp W   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&trans  &kp A   &kp S   &kp D   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&trans  &trans  &none   &none   &none   &none     &none  &none   &none   &none   &none   &none   &none
-&none   &trans  &trans  &trans  &trans  &trans    &none  &trans  &trans  &trans  &trans  &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp  &kp NUMBER_6  &kp NUMBER_7   &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp DEL
+&trans  &kp Q         &kp W         &kp E         &kp R         &kp T           &kp  &kp Y         &kp U          &kp I         &kp O         &kp P          &kp ASTERISK
+&trans  &kp A         &kp S         &kp D         &kp F         &kp G           &kp  &kp H         &kp J          &kp K         &kp L         &kp SEMICOLON  &kp COLON
+&trans  &trans        &kp Z         &kp X         &kp C         &kp V           &kp  &kp B         &kp N          &kp M         &kp COMMA     &kp PERIOD     &kp SLASH
+&kp     &trans        &kp           &trans        &kp ESCAPE    &kp SPACE       &kp  &kp ENTER     &kp BACKSPACE  &kp           &kp           &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
